@@ -15,6 +15,6 @@ vector<int> solution(vector<int> arr) {
             return answer;
         }
     }
-    arr.erase(arr.begin()+k, arr.begin()+k+1);
+    arr.erase(arr.begin()+k);
     return arr;
 }
