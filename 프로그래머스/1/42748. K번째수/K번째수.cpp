@@ -11,12 +11,9 @@ vector<int> solution(vector<int> array, vector<vector<int>> commands) {
         i = commands[t][0];
         j = commands[t][1];
         k = commands[t][2];
-        for (int p = 0; p < j-i+1; p++){
-            store.push_back(array[i+p-1]);
-            sort(store.begin(),store.end());
-        }
+        vector<int> store(array.begin()+i-1,array.begin()+j);
+        sort(store.begin(),store.end());
         answer.push_back(store[k-1]);
-        store.clear();
     }
     return answer;
 }
